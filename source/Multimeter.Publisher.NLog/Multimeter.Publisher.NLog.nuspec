@@ -4,7 +4,7 @@
         <id>$id$</id>
         <version>$version$</version>
         <title>$id$</title>
-        <authors>$author$</authors>
+        <authors>neutmute</authors>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>$description$</description>
 		<projectUrl>https://github.com/neutmute/multimeter</projectUrl>
