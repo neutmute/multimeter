@@ -11,6 +11,22 @@ using Multimeter.Config;
 
 namespace Tests.Integration
 {
+    public class MyCustomMetric : IMetric
+    {
+        public DateTimeOffset Timestamp { get; set; }
+        public string Type => "MyCustomMetric";
+        public string Name { get; set; }
+
+        public string CrazyProperty { get; set; }
+
+        public MyCustomMetric()
+        {
+            Timestamp = DateTimeOffset.Now;
+            Name = "MySuperCusomMetric";
+            CrazyProperty = "This will log too!";
+        }
+    }
+
     class Program
     {
         static void Main(string[] args)
@@ -19,21 +35,14 @@ namespace Tests.Integration
 
             ConfigureMultimeter();
 
-            CreateMetrics();
+            MetricDemo.Go();
         }
 
         private static void ConfigureMultimeter()
         {
             MultimeterConfig.Instance.Publishers.Add("Multimeter.Publisher.Loggly", "Multimeter.Publisher.Loggly.LogglyPublisher");
         }
-
-        private static void CreateMetrics()
-        {
-            using (new SelfPublishingTimedMetric("Multimeter", "self-publishing-test"))
-            {
-                Thread.Sleep(500);
-            }
-        }
+        
 
         private static void ConfigureLoggly()
         {

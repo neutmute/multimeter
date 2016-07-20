@@ -8,7 +8,7 @@
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>$description$</description>
 		<projectUrl>https://github.com/neutmute/multimeter</projectUrl>
-		<iconUrl>https://github.com/neutmute/multimeter/SolutionItems/multimeter128.gif</iconUrl>
+		<iconUrl>https://raw.githubusercontent.com/neutmute/multimeter/develop/SolutionItems/multimeter128.gif</iconUrl>
 
 
     </metadata>
