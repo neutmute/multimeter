@@ -6,27 +6,10 @@ using System.Threading;
 using System.Threading.Tasks;
 using Loggly;
 using Loggly.Config;
-using Multimeter;
 using Multimeter.Config;
 
 namespace Tests.Integration
 {
-    public class MyCustomMetric : IMetric
-    {
-        public DateTimeOffset Timestamp { get; set; }
-        public string Type => "MyCustomMetric";
-        public string Name { get; set; }
-
-        public string CrazyProperty { get; set; }
-
-        public MyCustomMetric()
-        {
-            Timestamp = DateTimeOffset.Now;
-            Name = "MySuperCusomMetric";
-            CrazyProperty = "This will log too!";
-        }
-    }
-
     class Program
     {
         static void Main(string[] args)
