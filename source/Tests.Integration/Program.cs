@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using Loggly;
 using Loggly.Config;
 using Multimeter;
 using Multimeter.Config;
@@ -32,6 +33,8 @@ namespace Tests.Integration
             {
                 Thread.Sleep(500);
             }
+
+            Thread.Sleep(2000);
         }
 
         private static void ConfigureLoggly()
@@ -42,9 +45,18 @@ namespace Tests.Integration
 
             Console.WriteLine($"config.CustomerToken is {config.CustomerToken}");
 
+            if (string.IsNullOrEmpty(config.CustomerToken))
+            {
+                throw new Exception("Please set loggly customer token via environment variable: multimeter-loggly-customer-token");
+            }
+
             config.Transport.EndpointHostname = "logs-01.loggly.com";
             config.Transport.EndpointPort = 443;
             config.Transport.LogTransport = LogTransport.Https;
+            
+            var ct = new ApplicationNameTag();
+            ct.Formatter = "application-{0}";
+            config.TagConfig.Tags.Add(ct);
         }
     }
 }
