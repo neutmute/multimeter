@@ -13,25 +13,16 @@ namespace Multimeter
     public class MultimeterService
     {
         private static readonly ILog Log = LogManager.GetCurrentClassLogger();
+
         public List<IPublisher> Publishers { get; private set; }
 
-        public bool HasConfig 
-        {
-            get
-            {
-                return MultimeterConfig.IsPresent
-                    && MultimeterConfig.Instance.HasPublisherConfig;
-            } 
-        }
+        public bool HasConfig => MultimeterConfig.Instance.HasValidConfig;
 
         #region Singleton
 
         private static readonly Lazy<MultimeterService> _lazy = new Lazy<MultimeterService>(() => new MultimeterService());
 
-        public static MultimeterService Instance
-        {
-            get { return _lazy.Value; }
-        }
+        public static MultimeterService Instance => _lazy.Value;
 
         private MultimeterService()
         {
@@ -39,7 +30,7 @@ namespace Multimeter
 
             if (HasConfig)
             { 
-                foreach (PublisherConfig publisherConfig in MultimeterConfig.Instance.Publishers)
+                foreach (var publisherConfig in MultimeterConfig.Instance.Publishers)
                 {
                     var publisher = (IPublisher)Activator.CreateInstance(publisherConfig.AssemblyName, publisherConfig.AssemblyType).Unwrap();
                     Publishers.Add(publisher);

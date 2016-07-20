@@ -11,7 +11,7 @@
     <externalType name="TimeSpan" namespace="System" />
   </typeDefinitions>
   <configurationElements>
-    <configurationSection name="MultimeterConfig" codeGenOptions="Singleton, XmlnsProperty" xmlSectionName="multimeterConfig">
+    <configurationSection name="MultimeterAppConfig" accessModifier="Internal" codeGenOptions="Singleton, XmlnsProperty" xmlSectionName="multimeterConfig">
       <elementProperties>
         <elementProperty name="Publishers" isRequired="false" isKey="false" isDefaultCollection="false" xmlName="publishers" isReadOnly="false">
           <type>
@@ -20,17 +20,17 @@
         </elementProperty>
         <elementProperty name="KeenIO" isRequired="false" isKey="false" isDefaultCollection="false" xmlName="keenIO" isReadOnly="false">
           <type>
-            <configurationElementMoniker name="/d0ed9acb-0435-4532-afdd-b5115bc4d562/KeenIOConfig" />
+            <configurationElementMoniker name="/d0ed9acb-0435-4532-afdd-b5115bc4d562/KeenIOAppConfig" />
           </type>
         </elementProperty>
       </elementProperties>
     </configurationSection>
-    <configurationElementCollection name="PublisherConfigCollection" xmlItemName="publisher" codeGenOptions="Indexer, AddMethod, RemoveMethod, GetItemMethods">
+    <configurationElementCollection name="PublisherConfigCollection" accessModifier="Internal" xmlItemName="publisher" codeGenOptions="Indexer, AddMethod, RemoveMethod, GetItemMethods">
       <itemType>
-        <configurationElementMoniker name="/d0ed9acb-0435-4532-afdd-b5115bc4d562/PublisherConfig" />
+        <configurationElementMoniker name="/d0ed9acb-0435-4532-afdd-b5115bc4d562/PublisherAppConfig" />
       </itemType>
     </configurationElementCollection>
-    <configurationElement name="PublisherConfig">
+    <configurationElement name="PublisherAppConfig" accessModifier="Internal">
       <attributeProperties>
         <attributeProperty name="AssemblyName" isRequired="true" isKey="false" isDefaultCollection="false" xmlName="assemblyName" isReadOnly="false">
           <type>
@@ -44,7 +44,7 @@
         </attributeProperty>
       </attributeProperties>
     </configurationElement>
-    <configurationElement name="KeenIOConfig">
+    <configurationElement name="KeenIOAppConfig" accessModifier="Internal">
       <attributeProperties>
         <attributeProperty name="ProjectId" isRequired="false" isKey="false" isDefaultCollection="false" xmlName="projectId" isReadOnly="false">
           <type>
@@ -52,25 +52,6 @@
           </type>
         </attributeProperty>
         <attributeProperty name="WriteKey" isRequired="false" isKey="false" isDefaultCollection="false" xmlName="writeKey" isReadOnly="false">
-          <type>
-            <externalTypeMoniker name="/d0ed9acb-0435-4532-afdd-b5115bc4d562/String" />
-          </type>
-        </attributeProperty>
-      </attributeProperties>
-    </configurationElement>
-    <configurationElement name="SolutionConfig">
-      <attributeProperties>
-        <attributeProperty name="Name" isRequired="true" isKey="false" isDefaultCollection="false" xmlName="name" isReadOnly="false" documentation="Name of the application">
-          <type>
-            <externalTypeMoniker name="/d0ed9acb-0435-4532-afdd-b5115bc4d562/String" />
-          </type>
-        </attributeProperty>
-        <attributeProperty name="Project" isRequired="false" isKey="false" isDefaultCollection="false" xmlName="project" isReadOnly="false" documentation="The type of project: Web.UI, Web.API, Windows Service">
-          <type>
-            <externalTypeMoniker name="/d0ed9acb-0435-4532-afdd-b5115bc4d562/String" />
-          </type>
-        </attributeProperty>
-        <attributeProperty name="Environment" isRequired="false" isKey="false" isDefaultCollection="false" xmlName="environment" isReadOnly="false">
           <type>
             <externalTypeMoniker name="/d0ed9acb-0435-4532-afdd-b5115bc4d562/String" />
           </type>

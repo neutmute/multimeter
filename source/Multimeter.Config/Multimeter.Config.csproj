@@ -48,7 +48,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ConfigurationSection.csd</DependentUpon>
     </Compile>
-    <Compile Include="MultimeterConfigCustom.cs" />
+    <Compile Include="IMultimeterConfig.cs" />
+    <Compile Include="MultimeterAppConfig.cs" />
+    <Compile Include="MultimeterConfig.cs" />
     <Compile Include="Properties\AssemblyInfoUnique.cs" />
   </ItemGroup>
   <ItemGroup>

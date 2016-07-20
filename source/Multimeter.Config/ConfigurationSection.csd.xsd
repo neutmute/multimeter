@@ -8,15 +8,15 @@
 </auto-generated>
 -->
 <xs:schema xmlns:tns="Multimeter.Config" elementFormDefault="qualified" targetNamespace="Multimeter.Config" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-	<xs:element name="multimeterConfig" type="tns:Multimeter.Config.MultimeterConfigCT" />
-	<xs:complexType name="Multimeter.Config.MultimeterConfigCT">
+	<xs:element name="multimeterConfig" type="tns:Multimeter.Config.MultimeterAppConfigCT" />
+	<xs:complexType name="Multimeter.Config.MultimeterAppConfigCT">
 		<xs:choice minOccurs="0" maxOccurs="unbounded">
 			<xs:element minOccurs="0" name="publishers" type="tns:Multimeter.Config.PublisherConfigCollectionCT">
 				<xs:annotation>
 					<xs:documentation>The Publishers.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element minOccurs="0" name="keenIO" type="tns:Multimeter.Config.KeenIOConfigCT">
+			<xs:element minOccurs="0" name="keenIO" type="tns:Multimeter.Config.KeenIOAppConfigCT">
 				<xs:annotation>
 					<xs:documentation>The KeenIO.</xs:documentation>
 				</xs:annotation>
@@ -25,14 +25,14 @@
 	</xs:complexType>
 	<xs:complexType name="Multimeter.Config.PublisherConfigCollectionCT">
 		<xs:choice minOccurs="0" maxOccurs="unbounded">
-			<xs:element minOccurs="0" maxOccurs="unbounded" name="publisher" type="tns:Multimeter.Config.PublisherConfigCT">
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="publisher" type="tns:Multimeter.Config.PublisherAppConfigCT">
 				<xs:annotation>
-					<xs:documentation>The PublisherConfig Configuration Element.</xs:documentation>
+					<xs:documentation>The PublisherAppConfig Configuration Element.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:choice>
 	</xs:complexType>
-	<xs:complexType name="Multimeter.Config.PublisherConfigCT">
+	<xs:complexType name="Multimeter.Config.PublisherAppConfigCT">
 		<xs:attribute name="assemblyName" use="required" type="xs:string">
 			<xs:annotation>
 				<xs:documentation>The AssemblyName.</xs:documentation>
@@ -44,7 +44,7 @@
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
-	<xs:complexType name="Multimeter.Config.KeenIOConfigCT">
+	<xs:complexType name="Multimeter.Config.KeenIOAppConfigCT">
 		<xs:attribute name="projectId" use="optional" type="xs:string">
 			<xs:annotation>
 				<xs:documentation>The ProjectId.</xs:documentation>
@@ -53,23 +53,6 @@
 		<xs:attribute name="writeKey" use="optional" type="xs:string">
 			<xs:annotation>
 				<xs:documentation>The WriteKey.</xs:documentation>
-			</xs:annotation>
-		</xs:attribute>
-	</xs:complexType>
-	<xs:complexType name="Multimeter.Config.SolutionConfigCT">
-		<xs:attribute name="name" use="required" type="xs:string">
-			<xs:annotation>
-				<xs:documentation>Name of the application</xs:documentation>
-			</xs:annotation>
-		</xs:attribute>
-		<xs:attribute name="project" use="optional" type="xs:string">
-			<xs:annotation>
-				<xs:documentation>The type of project: Web.UI, Web.API, Windows Service</xs:documentation>
-			</xs:annotation>
-		</xs:attribute>
-		<xs:attribute name="environment" use="optional" type="xs:string">
-			<xs:annotation>
-				<xs:documentation>The Environment.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>

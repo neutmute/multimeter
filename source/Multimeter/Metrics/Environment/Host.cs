@@ -11,9 +11,9 @@ namespace Multimeter
             OperatingSystem = new OperatingSystem();
         }
 
-        public override string ToString()
-        {
-            return $"Name={Name}, OperatingSystem={OperatingSystem}";
-        }
+        //public override string ToString()
+        //{
+        //    //return $"Name={Name}, OperatingSystem={OperatingSystem}";
+        //}
     }
 }
