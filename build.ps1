@@ -41,8 +41,8 @@ function nugetPack{
         $env:PackageVersion = "1.0.0.0"
     }
 
-    nuget pack $rootFolder\source\Multimeter\Multimeter.csproj                                         -o $outputFolder -IncludeReferencedProjects -p Configuration=$configuration -Version $env:PackageVersion
     nuget pack $rootFolder\source\Multimeter.Config\Multimeter.Config.csproj                           -o $outputFolder -IncludeReferencedProjects -p Configuration=$configuration -Version $env:PackageVersion
+    nuget pack $rootFolder\source\Multimeter\Multimeter.csproj                                         -o $outputFolder -IncludeReferencedProjects -p Configuration=$configuration -Version $env:PackageVersion
     nuget pack $rootFolder\source\Multimeter.Publisher.KeenIO\Multimeter.Publisher.KeenIO.csproj       -o $outputFolder -IncludeReferencedProjects -p Configuration=$configuration -Version $env:PackageVersion
     nuget pack $rootFolder\source\Multimeter.Publisher.Loggly\Multimeter.Publisher.Loggly.csproj       -o $outputFolder -IncludeReferencedProjects -p Configuration=$configuration -Version $env:PackageVersion
     nuget pack $rootFolder\source\Multimeter.Publisher.NewRelic\Multimeter.Publisher.NewRelic.csproj   -o $outputFolder -IncludeReferencedProjects -p Configuration=$configuration -Version $env:PackageVersion
