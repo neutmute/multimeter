@@ -1,5 +1,13 @@
+![](https://raw.githubusercontent.com/neutmute/multimeter/master/SolutionItems/multimeter128.gif)
 # Multimeter#
 It measures things.
+
+### Usage Example
+
+	using (new SelfPublishingTimedMetric("S3", "backup-download"))
+    {
+        // Do your expensive work here
+    }
 
 ### Example New Relic Configuration
 
