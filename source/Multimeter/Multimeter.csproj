@@ -55,7 +55,6 @@
     <Compile Include="..\..\SolutionItems\Properties\AssemblyInfo.cs">
       <Link>Properties\AssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include="ExtensionMethods\ISelfPublishingMetric.cs" />
     <Compile Include="Metrics\Gauges\GaugeMetric.cs" />
     <Compile Include="Metrics\Gauges\GaugeProperties.cs" />
     <Compile Include="Interfaces\IPublisher.cs" />
@@ -86,6 +85,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="ExtensionMethods\" />
     <Folder Include="Metrics\Counters\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
@@ -97,4 +97,3 @@
   </Target>
   -->
 </Project>
-
