@@ -6,9 +6,9 @@ namespace Multimeter
     public class SelfTimingTimedMetric : TimedMetricCore
     {
         private readonly string _type;
-        public readonly Stopwatch _stopwatch;
+        private readonly Stopwatch _stopwatch;
 
-        public override string Type { get { return _type; } }
+        public override string Type => _type;
 
         /// <summary>
         /// Expose for mid stream measurements. bit icky.

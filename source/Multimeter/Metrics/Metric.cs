@@ -16,7 +16,7 @@ namespace Multimeter
 
         public override string ToString()
         {
-            return string.Format("Type='{0}', Name='{1}'", GetType().Name, Name);
+            return $"Type='{GetType().Name}', Name='{Name}'";
         }
     }
 }

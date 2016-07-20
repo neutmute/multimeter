@@ -29,12 +29,10 @@ namespace Tests.Integration
 
         private static void CreateMetrics()
         {
-            using (new SelfPublishingTimedMetric("Multimeter", "SelfPublishing"))
+            using (new SelfPublishingTimedMetric("Multimeter", "self-publishing-test"))
             {
                 Thread.Sleep(500);
             }
-
-            Thread.Sleep(2000);
         }
 
         private static void ConfigureLoggly()

@@ -14,7 +14,7 @@
 
         public override string ToString()
         {
-            return string.Format("{0}\\{1}:\t{2}", Type, Name, Timer);
+            return $"{Type}\\{Name}:\t{Timer}";
         }
     }
 }
