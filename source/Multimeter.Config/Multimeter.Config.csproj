@@ -48,6 +48,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ConfigurationSection.csd</DependentUpon>
     </Compile>
+    <Compile Include="ExtensionMethods\PublisherConfigExtensionMethods.cs" />
     <Compile Include="IMultimeterConfig.cs" />
     <Compile Include="MultimeterAppConfig.cs" />
     <Compile Include="MultimeterConfig.cs" />
