@@ -12,7 +12,7 @@ namespace Multimeter
 {
     public class MultimeterService
     {
-        private static readonly ILog Log = LogManager.GetCurrentClassLogger();
+        private static readonly ILog Log = LogManager.GetLogger<MultimeterService>();
 
         public List<IPublisher> Publishers { get; private set; }
 

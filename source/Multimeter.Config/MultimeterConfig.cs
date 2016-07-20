@@ -21,14 +21,8 @@ namespace Multimeter.Config
 
     public class MultimeterConfig  : IMultimeterConfig
     {
-        //public static bool IsPresent
-        //{
-        //    get { return Instance != null; }
-        //}
-        
         public bool HasValidConfig => Publishers != null && Publishers.Count > 0;
-
-
+        
         public List<IPublisherConfig> Publishers { get; }
 
         public IKeenIOConfig KeenIO { get; }
@@ -80,7 +74,7 @@ namespace Multimeter.Config
                 }
             }
 
-            //todo: parse and add keenio config if ever required
+            //todo: parse and add keenio config
 
             return config;
         }
