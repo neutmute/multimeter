@@ -1,6 +1,8 @@
 ![](https://raw.githubusercontent.com/neutmute/multimeter/master/SolutionItems/multimeter128.gif) 
 # Multimeter#
-It measures things.
+It measures things!
+
+Multimeter abstracts various third party metering services such as New Relic from your code. Using Multimeter  prevents direct coupling to a particular service provider. Routing timing and event measurements to a different service is as easy as changing the `publisher` configuration in your `app.config`. 
 
 [![multimeter MyGet Build Status](https://www.myget.org/BuildSource/Badge/multimeter?identifier=11124d6e-d5a1-407e-952b-7be2ca8c6007)](https://www.myget.org/) ![Version](https://img.shields.io/nuget/v/multimeter.svg)
 
