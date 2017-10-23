@@ -18,7 +18,7 @@ namespace Multimeter.Publisher.KeenIO
         {
             if (MultimeterConfig.Instance.KeenIO == null)
             {
-                throw new ConfigurationErrorsException("KeenIO configuration is missing");
+                throw new Exception("KeenIO configuration is missing");
             }
 
             var projectId = MultimeterConfig.Instance.KeenIO.ProjectId;
