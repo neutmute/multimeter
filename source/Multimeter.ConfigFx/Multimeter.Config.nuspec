@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>Multimeter.Config</id>
+        <version>$version$</version>
+        <title>$id$</title>
+        <authors>neutmute</authors>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>$description$</description>
+		<projectUrl>https://github.com/neutmute/multimeter</projectUrl>
+		<iconUrl>https://raw.githubusercontent.com/neutmute/multimeter/develop/SolutionItems/multimeter128.gif</iconUrl>
+
+
+    </metadata>
+</package>

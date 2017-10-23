@@ -19,10 +19,10 @@ namespace Multimeter.Config
         public string WriteKey { get; set; }
     }
 
-    public class MultimeterConfig  : IMultimeterConfig
+    public class MultimeterConfig : IMultimeterConfig
     {
         public bool HasValidConfig => Publishers != null && Publishers.Count > 0;
-        
+
         public List<IPublisherConfig> Publishers { get; }
 
         public IKeenIOConfig KeenIO { get; }
@@ -35,14 +35,7 @@ namespace Multimeter.Config
             {
                 if (_instance == null)
                 {
-                    if (MultimeterAppConfig.HasAppConfig)
-                    {
-                        _instance = FromAppConfig();
-                    }
-                    else
-                    {
-                        _instance = GetNullConfig();
-                    }
+                    _instance = GetNullConfig();
                 }
                 return _instance;
             }
@@ -58,26 +51,5 @@ namespace Multimeter.Config
         {
             return new MultimeterConfig();
         }
-        
-        private static IMultimeterConfig FromAppConfig()
-        {
-            var config = new MultimeterConfig();
-            
-            if (MultimeterAppConfig.Instance.Publishers != null)
-            {
-                foreach (PublisherAppConfig appPubConfig in MultimeterAppConfig.Instance.Publishers)
-                {
-                    var newConfig = new PublisherConfig();
-                    newConfig.AssemblyName = appPubConfig.AssemblyName;
-                    newConfig.AssemblyType = appPubConfig.AssemblyType;
-                    config.Publishers.Add(newConfig);
-                }
-            }
-
-            //todo: parse and add keenio config
-
-            return config;
-        }
-
     }
 }

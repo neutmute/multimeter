@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
-using System.Linq;
-using System.Security.Policy;
-using System.Text;
 using Common.Logging;
-using Multimeter;
 using Multimeter.Config;
 
 namespace Multimeter
@@ -32,7 +27,8 @@ namespace Multimeter
             { 
                 foreach (var publisherConfig in MultimeterConfig.Instance.Publishers)
                 {
-                    var publisher = (IPublisher)Activator.CreateInstance(publisherConfig.AssemblyName, publisherConfig.AssemblyType).Unwrap();
+                    var publisherType = Type.GetType($"{publisherConfig.AssemblyType}, {publisherConfig.AssemblyName}");
+                    var publisher = (IPublisher)Activator.CreateInstance(publisherType);
                     Publishers.Add(publisher);
                 }
             }

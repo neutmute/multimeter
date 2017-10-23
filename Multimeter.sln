@@ -1,34 +1,36 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2005
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Multimeter", "source\Multimeter\Multimeter.csproj", "{477D5C22-84D0-4FB2-80FD-2DAB11768E83}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Multimeter", "source\Multimeter\Multimeter.csproj", "{477D5C22-84D0-4FB2-80FD-2DAB11768E83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Multimeter.Publisher.KeenIO", "source\Multimeter.Publisher.KeenIO\Multimeter.Publisher.KeenIO.csproj", "{9BDC3813-3707-433E-AADE-6DBD68C1D681}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Multimeter.Publisher.KeenIO", "source\Multimeter.Publisher.KeenIO\Multimeter.Publisher.KeenIO.csproj", "{9BDC3813-3707-433E-AADE-6DBD68C1D681}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Multimeter.Config", "source\Multimeter.Config\Multimeter.Config.csproj", "{58A100CE-CC7E-43BF-A054-D28648F092AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Multimeter.Config", "source\Multimeter.Config\Multimeter.Config.csproj", "{58A100CE-CC7E-43BF-A054-D28648F092AC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{2E23283E-371C-4190-8BEE-B66E6883D7FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests.Multimeter", "source\Tests.Multimeter\Tests.Multimeter.csproj", "{726E5A24-0204-4B6F-B762-64EE3BABD4FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests.Multimeter", "source\Tests.Multimeter\Tests.Multimeter.csproj", "{726E5A24-0204-4B6F-B762-64EE3BABD4FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Multimeter.Publisher.Loggly", "source\Multimeter.Publisher.Loggly\Multimeter.Publisher.Loggly.csproj", "{9458E7B9-9985-4DDA-87ED-6210AE4232CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Multimeter.Publisher.Loggly", "source\Multimeter.Publisher.Loggly\Multimeter.Publisher.Loggly.csproj", "{9458E7B9-9985-4DDA-87ED-6210AE4232CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Multimeter.Publisher.NewRelic", "source\Multimeter.Publisher.NewRelic\Multimeter.Publisher.NewRelic.csproj", "{29F5AAA6-7457-44E6-93B0-1FD8909C8487}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Multimeter.Publisher.NewRelic", "source\Multimeter.Publisher.NewRelic\Multimeter.Publisher.NewRelic.csproj", "{29F5AAA6-7457-44E6-93B0-1FD8909C8487}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Multimeter.Wcf", "source\Multimeter.Wcf\Multimeter.Wcf.csproj", "{DA50A708-A589-47E7-A454-7EC975AAD85A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Multimeter.Wcf", "source\Multimeter.Wcf\Multimeter.Wcf.csproj", "{DA50A708-A589-47E7-A454-7EC975AAD85A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Multimeter.Web", "source\Multimeter.Web\Multimeter.Web.csproj", "{5243AD8E-45FA-4C00-9BF9-06BEA95AA3D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Multimeter.Web", "source\Multimeter.Web\Multimeter.Web.csproj", "{5243AD8E-45FA-4C00-9BF9-06BEA95AA3D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Multimeter.Publisher.NLog", "source\Multimeter.Publisher.NLog\Multimeter.Publisher.NLog.csproj", "{2D5F01C9-BF83-464D-A4B7-AC020D00CD6C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Multimeter.Publisher.NLog", "source\Multimeter.Publisher.NLog\Multimeter.Publisher.NLog.csproj", "{2D5F01C9-BF83-464D-A4B7-AC020D00CD6C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests.Integration", "source\Tests.Integration\Tests.Integration.csproj", "{A8E1AD5C-DBC9-4457-A69C-4577CD1CB3FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests.Integration", "source\Tests.Integration\Tests.Integration.csproj", "{A8E1AD5C-DBC9-4457-A69C-4577CD1CB3FC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9B394BB6-4F17-4A74-BD41-CB4623304E31}"
 	ProjectSection(SolutionItems) = preProject
 		readme.md = readme.md
 	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Multimeter.ConfigFx", "source\Multimeter.ConfigFx\Multimeter.ConfigFx.csproj", "{EA3C839D-03DB-4ABC-9676-A082B38F56DC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -76,6 +78,10 @@ Global
 		{A8E1AD5C-DBC9-4457-A69C-4577CD1CB3FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8E1AD5C-DBC9-4457-A69C-4577CD1CB3FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8E1AD5C-DBC9-4457-A69C-4577CD1CB3FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA3C839D-03DB-4ABC-9676-A082B38F56DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA3C839D-03DB-4ABC-9676-A082B38F56DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA3C839D-03DB-4ABC-9676-A082B38F56DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA3C839D-03DB-4ABC-9676-A082B38F56DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -83,5 +89,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{726E5A24-0204-4B6F-B762-64EE3BABD4FF} = {2E23283E-371C-4190-8BEE-B66E6883D7FF}
 		{A8E1AD5C-DBC9-4457-A69C-4577CD1CB3FC} = {2E23283E-371C-4190-8BEE-B66E6883D7FF}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {51B79BC2-D137-44FC-8DCB-FFAC74525F30}
 	EndGlobalSection
 EndGlobal
